@@ -5,18 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index.css"/>
     <script src="js/index.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   </head>
+  <style>
+  </style>
   <body>
-    <h2>어서오세요</h2>
-    <a href="save.html">회원가입</a>
-    <button onclick="fun1()">함수호출</button>
-    <button onclick="gologin()">로그인</button>
+    <h6>portfolio</h6>
+
+      <main class="container">
+        <article id="wrapper">
+          <div class="wrapper_content">          
+            <button onclick="gosave()">회원가입</button>
+            <button onclick="gologin()">로그인</button>
+            <button onclick="fun1()">함수</button>
+          </div>
+          <div id="wrapper_img" class="wrapper_content"></div>
+        </article>
+      </main>
   </body>
   <script>
     const gologin = () => {
       location.href = "login.html";
     };
+    const gosave = () => {
+      location.href = "save.html"
+    }
   </script>
 </html>

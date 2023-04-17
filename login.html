@@ -5,14 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="/js/login.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   </head>
   <body>
-    <h2>로그인 페이지</h2>
-    <button onclick="goIndex()">index로 가기</button>
+    <main class="container">
+       <article class="grid">
+      <form action="#" name="loginForm" method="post"
+    onsubmit="return login_check()">
+      <div>
+        id  <input type="text" id="member-id">
+      <h6 id="id-result"></h6>
+        password  <input type="text" id="member-password">
+        <h6 id="password-result"></h6>
+      </div>
+      <div>
+      <input type="submit" value="login">
+      </div>
+      <div><button onclick="goIndex()">index로 가기</button></div> 
+    </form>
+    <div><img src="./images/rabbit.jpg" alt="토끼"></div>
+    </article>
+    </main>
+   
+    
   </body>
-  <script>
-    const goIndex = () => {
-      history.back;
-    };
-  </script>
 </html>

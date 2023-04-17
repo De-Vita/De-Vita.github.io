@@ -1,0 +1,9 @@
+label {
+    display: block;
+}
+#signup_form {
+    width: 600px;
+}
+.btn {
+    margin: 0;
+}
