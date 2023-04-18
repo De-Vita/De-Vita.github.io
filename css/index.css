@@ -1,52 +1,10 @@
-.container {
+.grid {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  
-}
-body{
-  background-color: beige;
-}
-
-article img {
-  max-width: 100%;
-  height: auto;
-}
-#wrapper{
-  width: 100%;
-  display: flex;
-  height: 40%;
-  padding: 0;
-  margin: 0;
-}
-.wrapper_content{
-  padding: 20px;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.wrapper_content button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
-#wrapper_img{
-  background-color: aqua;
-  width: 50%;
-  background-position-y: center;
-  align-items: center;
-  background-image: url("/images/rabbit-7863312_640.jpg");
-  background-size: cover;
-  background-position: center center;
-}
-
-
-:root {
-  --primary: #fb8c00;
+.theme-dark {
+  background-color: #222;
+  color: #fff;
 }

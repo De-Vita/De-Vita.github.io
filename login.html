@@ -6,25 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="/js/login.js"></script>
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
   </head>
   <body>
+    
+    <nav class="container-fluid dark-mode-toggle">
+      <ul>
+        <li>
+          <strong>Login</strong>
+        </li>
+      </ul>
+      <li class="dark-mode-toggle">
+        <button onclick="toggleDarkMode()"> <i id="mode-icon" class="fas fa-sun"></i></button>
+      </li>
+    </nav>
+
     <main class="container">
-       <article class="grid">
+       <article class="grid" data-theme="light">
       <form action="#" name="loginForm" method="post"
     onsubmit="return login_check()">
       <div>
-        id  <input type="text" id="member-id">
+        <input type="text" id="member-id" placeholder="id">
       <h6 id="id-result"></h6>
-        password  <input type="text" id="member-password">
+        <input type="text" id="member-password" placeholder="password">
         <h6 id="password-result"></h6>
       </div>
       <div>
-      <input type="submit" value="login">
+      <input type="submit" value="login" data-theme="light">
+      <button onclick="goIndex()" data-theme="light">index로 가기</button>
       </div>
-      <div><button onclick="goIndex()">index로 가기</button></div> 
-    </form>
-    <div><img src="./images/rabbit.jpg" alt="토끼"></div>
+    </form> 
+    <div class="grid"><img src="./images/mountain.jpg" alt="산"></div>
     </article>
     </main>
    

@@ -8,29 +8,34 @@
     <link rel="stylesheet" href="css/index.css"/>
     <script src="js/index.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <style>
   </style>
   <body>
-    <h6>portfolio</h6>
+    <nav class="container-fluid dark-mode-toggle">
+      <ul>
+        <li>
+          <strong>index</strong>
+        </li>
+      </ul>
+      <li class="dark-mode-toggle">
+        <button onclick="toggleDarkMode()"> <i id="mode-icon" class="fas fa-sun"></i></button>
+      </li>
+    </nav>
 
       <main class="container">
-        <article id="wrapper">
-          <div class="wrapper_content">          
-            <button onclick="gosave()">회원가입</button>
-            <button onclick="gologin()">로그인</button>
-            <button onclick="fun1()">함수</button>
+        <article class="grid" data-theme="light">
+          <div>          
+            <button id="save-button" onclick="gosave()" disabled data-theme="light"><strong>회원가입</strong></button>
+            <button id="login-button" onclick="gologin()" disabled data-theme="light"><strong>로그인</strong></button>
+            <button id="fun1-button" onclick="fun1()" disabled data-theme="light"><strong>함수</strong></button>
+            <a href="https://blog.naver.com/lu0201" type="button"></a>
+            <div class="g-recaptcha" data-sitekey="6LeXOpclAAAAAJY2tZy8mUiyO6KROmevIWL3L7iR" data-size="large" style="transform:scale(1.2);transform-origin:0 0;" data-callback="recaptchaCallback"></div>
           </div>
-          <div id="wrapper_img" class="wrapper_content"></div>
+          <div class="grid"><img src="./images/rabbit.jpg" alt="" id="myImage"></div>
         </article>
       </main>
   </body>
-  <script>
-    const gologin = () => {
-      location.href = "login.html";
-    };
-    const gosave = () => {
-      location.href = "save.html"
-    }
-  </script>
 </html>

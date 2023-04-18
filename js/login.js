@@ -57,3 +57,38 @@ const password_check = () => {
 const goIndex = () => {
     history.back();
   }
+
+
+  function toggleDarkMode() {
+    const body = document.querySelector("body");
+    body.classList.toggle("theme-dark");
+    var icon = document.getElementById("mode-icon");
+      if (icon.classList.contains("fa-sun")) {
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+      } else {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+      }
+
+    const article = document.querySelector("article");
+    const currentTheme = article.getAttribute("data-theme");
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    article.setAttribute("data-theme", newTheme);
+    
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach(button => {
+    const currentTheme = button.getAttribute("data-theme");
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    button.setAttribute("data-theme", newTheme);
+    });
+
+  }
+
+ 
+  
+  
+
+
+
+  
